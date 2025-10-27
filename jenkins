@@ -4,6 +4,11 @@ pipeline {
         jdk 'JDK21'
     }
     stages {
+        stage('display message'){
+            steps{
+                echo "hello from github"
+            }
+    }
         stage('Checkout code') {
             steps {
                 git branch: 'main', url: 'https://github.com/trabelsiaziz/Hello_example.git'
